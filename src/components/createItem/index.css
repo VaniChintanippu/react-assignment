@@ -1,0 +1,144 @@
+.create-item-bg-container {
+  background: #f5f5f5;
+  height: 100vh;
+}
+.create-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .create-item-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+}
+.create-item-image {
+  border-radius: 70px;
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .create-item-image {
+    order: 1;
+    height: 92vh;
+    border-radius: 0;
+    width: 50%;
+    align-self: flex-end;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .create-item-box-container {
+    width: 50%;
+  }
+}
+.create-item-card-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .create-item-card-container {
+    padding: 100px;
+    margin-left: 130px;
+  }
+}
+.create-item-card-heading {
+  color: #171f46;
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+}
+.label-name {
+  color: #7e858e;
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.input-field {
+  border: 1px solid #d7dfe9;
+  border-radius: 2px;
+  background: #ffffff;
+  height: 40px;
+
+  padding: 15px;
+  color: #183b56;
+  font-weight: 500;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .input-field {
+    width: 85%;
+  }
+}
+.user-input {
+  margin-bottom: 19px;
+}
+.text-area-field {
+  border: 1px solid #d7dfe9;
+  border-radius: 2px;
+  background: #ffffff;
+
+  padding: 15px;
+  color: #183b56;
+  font-weight: 500;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .text-area-field {
+    width: 85%;
+  }
+}
+.create-button {
+  background: #0b69ff;
+  border-radius: 4px;
+  border: 0;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100px;
+  margin-left: 80px;
+}
+@media screen and (min-width: 768px) {
+  .create-button {
+    margin-top: 30px;
+    margin-left: 180px;
+  }
+}
+.create-item-link {
+  display: flex;
+  text-decoration: none;
+  color: #7e858e;
+}
+.create-item-go-back-container {
+  display: flex;
+}
+.create-item-link-value {
+  margin-top: 20px;
+  margin-right: 8px;
+  color: #171f46;
+  font-weight: 200;
+}
+.desktop-go-back {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .desktop-go-back {
+    display: flex;
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-go-back {
+    display: none;
+  }
+}
+.mobile-go-back {
+  align-self: flex-start;
+  margin-left: 30px;
+}

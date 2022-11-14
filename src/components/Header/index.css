@@ -1,0 +1,25 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #d7dfe9;
+
+  padding: 10px 30px;
+}
+.add-button {
+  background: #2dca73;
+  border-radius: 4px;
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+}
+.header-logo {
+  height: 40px;
+}
+.header-person {
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.button-image-container {
+  margin-top: 0px;
+}

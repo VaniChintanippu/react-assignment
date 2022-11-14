@@ -1,0 +1,21 @@
+.tab-list {
+  list-style-type: none;
+}
+.button {
+  border: 1px solid #d7dfe9;
+  padding: 10px 30px;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    padding: 10px 60px;
+  }
+}
+.activeButton {
+  background: #0b69ff;
+  color: white;
+}
+.non-active {
+  background-color: #d7dfe9 24%;
+  color: black;
+  font-weight: 500;
+}

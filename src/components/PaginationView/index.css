@@ -1,0 +1,14 @@
+.pagination-list-container {
+  list-style-type: none;
+  margin-right: 10px;
+}
+.pagination-button {
+  padding: 7px 13px;
+  border: 1px solid #d7dfe9;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #171f46;
+}
+.active-page-button {
+  border: 1px solid #0b69ff;
+}
