@@ -17,7 +17,6 @@ class CreateItem extends Component {
     itemName: '',
     link: '',
     resourceName: '',
-    descriptionCount: 0,
     description: '',
   }
 
@@ -47,21 +46,42 @@ class CreateItem extends Component {
     })
   }
 
+  onSubmitFailureValidation = () => {
+    toast.error('Please Write Valid Details', {
+      position: 'bottom-left',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    })
+  }
+
   submitForm = async event => {
     event.preventDefault()
     const {itemName, link, resourceName, description} = this.state
     const userDetails = {itemName, link, resourceName, description}
+
     const url =
       'https://media-content.ccbp.in/website/react-assignment/add_resource.json'
-
-    axios
-      .post(url, JSON.stringify(userDetails))
-      .then(response => {
-        this.onSubmitSuccess(response)
-      })
-      .catch(error => {
-        this.onSubmitFailure(error)
-      })
+    if (
+      itemName.length >= 1 &&
+      resourceName.length >= 1 &&
+      description <= 250
+    ) {
+      axios
+        .post(url, JSON.stringify(userDetails))
+        .then(response => {
+          this.onSubmitSuccess(response)
+        })
+        .catch(error => {
+          this.onSubmitFailure(error)
+        })
+    } else {
+      this.onSubmitFailureValidation()
+    }
   }
 
   onChangeItemName = event => {
@@ -77,14 +97,7 @@ class CreateItem extends Component {
   }
 
   onChangeDescription = event => {
-    const {descriptionCount} = this.state
-    if (descriptionCount <= 250) {
-      this.setState(prevState => ({
-        descriptionCount: prevState.descriptionCount + 1,
-      }))
-
-      this.setState({description: event.target.value})
-    }
+    this.setState({description: event.target.value})
   }
 
   goBackToHome = () => (
