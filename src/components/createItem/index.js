@@ -22,7 +22,7 @@ class CreateItem extends Component {
 
   onSubmitSuccess = () => {
     toast.success('Success', {
-      position: 'bottom-left',
+      position: 'bottom-center',
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -35,7 +35,7 @@ class CreateItem extends Component {
 
   onSubmitFailure = () => {
     toast.error('Try Again', {
-      position: 'bottom-left',
+      position: 'bottom-center',
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -48,7 +48,7 @@ class CreateItem extends Component {
 
   onSubmitFailureValidation = () => {
     toast.error('Please Write Valid Details', {
-      position: 'bottom-left',
+      position: 'bottom-center',
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
